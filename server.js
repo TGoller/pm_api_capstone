@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+var policyRouter = require('./routes/policyRouter');
 
 const app = express();
 
@@ -12,10 +13,13 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 // top level route
 app.get("/", (req,res) => {
-    res.json({ message:"Welcome to the Policy Manamagnet CRUD app"});
+    res.json({ message:"Welcome to the Policy Management CRUD app"});
 });
+
+
+app.use('/api/policies',policyRouter);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}.`);
 });
