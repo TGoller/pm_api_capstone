@@ -3,11 +3,11 @@ var router = express.Router();
 
 // Policy page route.
 router.get('/', function (req, res) {
-    res.send('Policy Management home page');
-  });
+  res.send('Policy Management home page');
+});
 
-  router.post('/', function (req, res) {
-    res.json({message: 'Policy post response', requestBody: req.body});
-  });
+router.post('/', function (req, res) {
+  res.json({ message: 'Policy post response', requestBody: req.body });
+});
 
-  module.exports = router;
+module.exports = router;
