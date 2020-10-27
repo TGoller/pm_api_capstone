@@ -12,5 +12,13 @@ POST http://localhost:8080/api/policies HTTP/1.1
 content-type: application/json
 
 {
-    "policy": "Tracy policy"
+  "name": "Another Policy",
+  "type": " Auto Gold",
+  "holder_first_name": "Bailey",
+  "holder_last_name": "Pup",
+  "holder_account_id": "14",
+  "is_active": true,
+  "has_active_claim": false,
+  "effective_date": "2020-01-01",
+  "termination_date": "2020-12-31"
 }
