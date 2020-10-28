@@ -12,8 +12,8 @@ POST http://localhost:8080/api/policies HTTP/1.1
 content-type: application/json
 
 {
-  "name": "Silver Policy",
-  "type": "Renters",
+  "name": "Bronze Policy", 
+  "type": "Boat",
   "holder_first_name": "Bailey",
   "holder_last_name": "Pup",
   "holder_account_id": "14",
@@ -22,3 +22,24 @@ content-type: application/json
   "effective_date": "2020-01-01",
   "termination_date": "2020-12-31"
 }
+
+###
+
+GET http://localhost:8080/api/policies/5f98820beb05ad5c48d9b896 HTTP/1.1
+content-type: application/json
+
+###
+
+PUT http://localhost:8080/api/policies/5f98820beb05ad5c48d9b896 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Last policy",
+  "holder_last_name": "olive"
+}
+
+###
+
+DELETE http://localhost:8080/api/policies/5f9880498b9cbe3d00f2f7d6 HTTP/1.1
+content-type: application/json
+
