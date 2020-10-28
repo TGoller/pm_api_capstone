@@ -12,8 +12,8 @@ POST http://localhost:8080/api/policies HTTP/1.1
 content-type: application/json
 
 {
-  "name": "Another Policy",
-  "type": " Auto Gold",
+  "name": "Silver Policy",
+  "type": "Renters",
   "holder_first_name": "Bailey",
   "holder_last_name": "Pup",
   "holder_account_id": "14",
