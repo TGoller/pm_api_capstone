@@ -57,7 +57,7 @@ exports.updateByID = (req, res) => {
                 res.status(400).send(`No policy found with id: ${id}`);
             }
             else {
-                res.status(200).send(data);
+                res.status(200).json(data);
             }
         })
         .catch(err => {
@@ -80,5 +80,22 @@ exports.deleteByID = (req, res) => {
         })
         .catch(err => {
             res.status(400).send('There was an issue finding that one policy');
+        });
+};
+
+//deleteAllPolicies
+
+exports.deleteAllPolicies = (req, res) => {
+    Policy.deleteMany()
+        .then(data => {
+            if (!data) {
+                res.status(400).send(`No policies found`);
+            }
+            else {
+                res.status(200).send( `${data.deletedCount} polices deleted`);
+            }
+        })
+        .catch(err => {
+            res.status(400).send('There was an issue finding policies');
         });
 };

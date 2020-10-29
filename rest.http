@@ -12,7 +12,7 @@ POST http://localhost:8080/api/policies HTTP/1.1
 content-type: application/json
 
 {
-  "name": "Bronze Policy", 
+  "name": "2 policy", 
   "type": "Boat",
   "holder_first_name": "Bailey",
   "holder_last_name": "Pup",
@@ -40,6 +40,10 @@ content-type: application/json
 
 ###
 
-DELETE http://localhost:8080/api/policies/5f9880498b9cbe3d00f2f7d6 HTTP/1.1
+DELETE http://localhost:8080/api/policies/5cccccccd00f2f7d6 HTTP/1.1
 content-type: application/json
 
+###
+
+DELETE http://localhost:8080/api/policies HTTP/1.1
+content-type: application/json
