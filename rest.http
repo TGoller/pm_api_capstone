@@ -12,13 +12,13 @@ POST http://localhost:8080/api/policies HTTP/1.1
 content-type: application/json
 
 {
-  "name": "2 policy", 
-  "type": "Boat",
-  "holder_first_name": "Bailey",
+  "name": "3rd policy", 
+  "type": "Garage",
+  "holder_first_name": "Tenaya",
   "holder_last_name": "Pup",
   "holder_account_id": "14",
-  "is_active": true,
-  "has_active_claim": false,
+  "is_active": false,
+  "has_active_claim": true,
   "effective_date": "2020-01-01",
   "termination_date": "2020-12-31"
 }

@@ -5,6 +5,11 @@ const policyRouter = require('./routes/policyRouter');
 const mongoose = require("mongoose");
 
 const app = express();
+var corsOptions = {
+    origin: "http://localhost:8081"
+};
+
+app.use(cors(corsOptions));
 
 // parse http request with content type = application json
 app.use(bodyParser.json());
